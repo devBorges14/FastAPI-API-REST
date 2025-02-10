@@ -13,4 +13,4 @@ A API permitirá criar, listar, atualizar e excluir usuários por meio de requis
 ## Tecnologias Utilizadas
 - **Python**: Linguagem principal do projeto.
 - **FastAPI**: Framework web principal do projeto.
-    -> <a href="https://fastapi.tiangolo.com">Documentação do FastAPI<a>
+    <a href="https://fastapi.tiangolo.com">_Documentação do FastAPI_<a>
