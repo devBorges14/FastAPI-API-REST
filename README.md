@@ -54,7 +54,7 @@ pip install -r requirements.txt
 
 1. **Clone este repositório**:
    ```bash
-   git clone https://github.com/devBorges14/conversor-de-moedas
+   git clone https://github.com/devBorges14/FastAPI-API-REST
    cd FastAPI-API-REST
    ```
 2. **Instale os pré-requisitos** conforme listado acima.
