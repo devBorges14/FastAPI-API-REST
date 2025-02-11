@@ -36,15 +36,15 @@ Instale as dependências listadas no arquivo `requirements.txt` com o comando:
 pip install -r requirements.txt
 ```
 **Ou instale manualmente:**  
-- **uvicorn **: Um servidor ASGI para rodar o FastAPI.
+- **uvicorn**: Um servidor ASGI para rodar o FastAPI.
   ```bash
   pip install uvicorn 
   ```
-- **fastapi **: Para usar a FastAPI.
+- **fastapi**: Para usar a FastAPI.
   ```bash
   pip install fastapi 
   ```
-- **pydantic  **: validação e modelagem de dados com BaseModel.
+- **pydantic**: validação e modelagem de dados com BaseModel.
   ```_(Já vem com FastAPI)
   pip pydantic   
   ```
