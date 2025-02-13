@@ -27,12 +27,44 @@ Melhorias e Segurança
     Adicionar validações nos dados recebidos.
     Implementar autenticação, se necessário. 
 """
+"""
+Projeto: Criando uma API REST Simples
+O objetivo deste projeto é desenvolver uma API REST para gerenciar um sistema de usuários. A API permitirá criar, listar, atualizar e excluir usuários por meio de requisições HTTP.
+
+Passos do Projeto
+    1)Configuração do Ambiente
+        Escolher a linguagem de programação (Python).
+    2)Instalar as dependências necessárias (Flask ou FastAPI).
+
+    3)Criar a Estrutura do Projeto
+
+    4) Definir os Endpoints da API
+        GET /usuarios → Lista todos os usuários.
+        GET /usuarios/{id_usuarios} → Procura um usuário por ID.
+        POST /add/usuarios → Cria um novo usuário.
+        PUT /edit/usuarios/{id} → Atualiza um usuário existente.
+        DELETE /delete/usuarios/{id} → Remove um usuário.
+        Implementação da API
+
+    5) Criar uma estrutura para armazenar os usuários (pode ser um dicionário ou banco de dados).
+    6)Criar funções para cada endpoint, processando as requisições e retornando respostas no formato JSON.
+Testar a API
+    	Utilizar o Postman ou cURL para testar os endpoints.
+        Verificar se todas as operações funcionam corretamente.
+
+Melhorias e Segurança
+    Adicionar validações nos dados recebidos.
+    Implementar autenticação, se necessário. 
+"""
 import uvicorn
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import json
 import os
-
+from flask import render_template
+import flask
+from fastapi import FastAPI, Request
+from fastapi.templating import Jinja2Templates
 app = FastAPI()
 
 # Caminho do arquivo JSON
@@ -57,6 +89,12 @@ class Usuario(BaseModel):
     nome: str
     email: str
 
+# Define o diretório onde estão os templates HTML
+templates = Jinja2Templates(directory="templates")
+
+@app.get("/")
+def index(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
 # Visualizar todos
 @app.get("/usuarios") 
 def lista_de_usuarios():
